@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from '../../public/weather_app.png';
+import logo from '../../public/images/weather_app.png';
 
 export default function Title() {
   return (
