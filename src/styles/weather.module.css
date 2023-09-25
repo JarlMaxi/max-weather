@@ -1,0 +1,10 @@
+.body {
+    display: flex;
+    flex-direction: row;
+}
+.box {
+    width: 300px;
+    border: 5px solid red;
+    padding: 25px;
+    margin: 20px;
+}
