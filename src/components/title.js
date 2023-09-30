@@ -5,7 +5,7 @@ import styles from  '@/styles/title.module.css'
 export default function Title() {
   return (
     <div className={styles.body}>
-      <h1>Max personal weather app</h1>
+      <h1 className={styles.title}>Max personal weather app</h1>
       <Image
         src={logo}
         width={150}

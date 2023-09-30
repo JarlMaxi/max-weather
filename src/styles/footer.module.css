@@ -1,5 +1,8 @@
 .footer {
     background-color: #000;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -8,5 +11,10 @@
     line-height: 1.5;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    margin-top: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.info {
+    padding-top: 50px;
 }

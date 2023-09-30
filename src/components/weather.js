@@ -45,19 +45,19 @@ export default function Weather() {
     <div className={styles.body}>
       <div className={styles.box}>
         <h2>London</h2>
-        <p>Temperature: {londonData?.main?.temp}C</p>
+        <p>Temperature: {Math.round(londonData?.main?.temp)}C</p>
       </div>
       <div className={styles.box}>
         <h2>Windsor</h2>
-        <p>Temperature: {windsorData?.main?.temp}C</p>
+        <p>Temperature: {Math.round(windsorData?.main?.temp)}C</p>
       </div>
       <div className={styles.box}>
         <h2>Toronto</h2>
-        <p>Temperature: {torontoData?.main?.temp}C</p>
+        <p>Temperature: {Math.round(torontoData?.main?.temp)}C</p>
       </div>
       <div className={styles.box}>
         <h2>Horred</h2>
-        <p>Temperature: {horredData?.main?.temp}C</p>
+        <p>Temperature: {Math.round(horredData?.main?.temp)}C</p>
       </div>
     </div>
   );
