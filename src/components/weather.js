@@ -41,23 +41,32 @@ export default function Weather() {
     getWeather();
   }, []);
 
+  const londonIcon = 'https://openweathermap.org/img/wn/' + [londonData?.weather[0]?.icon] + '@2x.png';
+  const windsorIcon = 'https://openweathermap.org/img/wn/' + [windsorData?.weather[0]?.icon] + '@2x.png';
+  const torontoIcon = 'https://openweathermap.org/img/wn/' + [torontoData?.weather[0]?.icon] + '@2x.png';
+  const horredIcon = 'https://openweathermap.org/img/wn/' + [horredData?.weather[0]?.icon] + '@2x.png';
+
   return (
     <div className={styles.body}>
       <div className={styles.box}>
         <h2>London</h2>
         <p>Temperature: {Math.round(londonData?.main?.temp)}C</p>
+        <img className={styles.image} src={londonIcon} />
       </div>
       <div className={styles.box}>
         <h2>Windsor</h2>
         <p>Temperature: {Math.round(windsorData?.main?.temp)}C</p>
+        <img src={windsorIcon} />
       </div>
       <div className={styles.box}>
         <h2>Toronto</h2>
         <p>Temperature: {Math.round(torontoData?.main?.temp)}C</p>
+        <img src={torontoIcon} />
       </div>
       <div className={styles.box}>
         <h2>Horred</h2>
         <p>Temperature: {Math.round(horredData?.main?.temp)}C</p>
+        <img src={horredIcon} />
       </div>
     </div>
   );
