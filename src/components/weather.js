@@ -13,16 +13,16 @@ export default function Weather() {
     const getWeather = async () => {
       try {
         const response1 = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?lat=42.9834&lon=-81.233&${metricEndpont}&appid=${process.env.NEXT_PUBLIC_OPEN_WEATHER_API}`
+          `https://api.openweathermap.org/data/2.5/weather?lat=42.9834&lon=-81.233&${metricEndpont}&appid=${process.env.OPEN_WEATHER_API}`
         );
         const response2 = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?lat=42.3001&lon=-83.0165&${metricEndpont}&appid=${process.env.NEXT_PUBLIC_OPEN_WEATHER_API}`
+          `https://api.openweathermap.org/data/2.5/weather?lat=42.3001&lon=-83.0165&${metricEndpont}&appid=${process.env.OPEN_WEATHER_API}`
         );
         const response3 = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?lat=43.7001&lon=-79.4163&${metricEndpont}&appid=${process.env.NEXT_PUBLIC_OPEN_WEATHER_API}`
+          `https://api.openweathermap.org/data/2.5/weather?lat=43.7001&lon=-79.4163&${metricEndpont}&appid=${process.env.OPEN_WEATHER_API}`
         );
         const response4 = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?lat=57.35&lon=12.4667&${metricEndpont}&appid=${process.env.NEXT_PUBLIC_OPEN_WEATHER_API}`
+          `https://api.openweathermap.org/data/2.5/weather?lat=57.35&lon=12.4667&${metricEndpont}&appid=${process.env.OPEN_WEATHER_API}`
         );
         const data1 = response1.data;
         const data2 = response2.data;
