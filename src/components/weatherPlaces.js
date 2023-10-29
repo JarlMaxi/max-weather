@@ -9,25 +9,20 @@ export default function Weather() {
   const [torontoData, setTorontoData] = useState(null);
   const [horredData, setHorredData] = useState(null);
   const metricEndpont = "units=metric";
+
+  const getWeatherData = async (lat,lon) => {
+    const response = await axios.get(`/api/weather?lat=${lat}&lon=${lon}`);
+    return response.data;
+  }
+
   useEffect(() => {
     const getWeather = async () => {
       try {
-        const response1 = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?lat=42.9834&lon=-81.233&${metricEndpont}&appid=${process.env.OPEN_WEATHER_API}`
-        );
-        const response2 = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?lat=42.3001&lon=-83.0165&${metricEndpont}&appid=${process.env.OPEN_WEATHER_API}`
-        );
-        const response3 = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?lat=43.7001&lon=-79.4163&${metricEndpont}&appid=${process.env.OPEN_WEATHER_API}`
-        );
-        const response4 = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?lat=57.35&lon=12.4667&${metricEndpont}&appid=${process.env.OPEN_WEATHER_API}`
-        );
-        const data1 = response1.data;
-        const data2 = response2.data;
-        const data3 = response3.data;
-        const data4 = response4.data;
+
+        const data1 = await getWeatherData(42.9834, -81.233);
+        const data2 = await getWeatherData(42.3001, -83.0165);
+        const data3 = await getWeatherData(43.7001, -79.4163);
+        const data4 = await getWeatherData(57.35, 12.4667);
 
         setLondonData(data1);
         setWindsorData(data2);
