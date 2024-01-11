@@ -5,6 +5,7 @@ import styles from "@/styles/Home.module.css";
 import Title from "../components/title";
 import Weather from "../components/weatherPlaces";
 import Footer from "../components/footer";
+import SearchWeather from "../components/searchWeather";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +20,7 @@ export default function Home() {
       </Head>
       <Title />
       <Weather />
+      <SearchWeather />
       <Footer />
     </>
   );

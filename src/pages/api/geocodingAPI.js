@@ -1,17 +1,15 @@
 import axios from "axios";
 
 export default async (req, res) => {
-  const metricEndpoint = "units=metric";
   const apiKey = process.env.OPEN_WEATHER_API;
 
   try {
     const response = await axios.get(
-      "https://api.openweathermap.org/data/2.5/weather",
+      "http://api.openweathermap.org/geo/1.0/direct",
       {
         params: {
-          lat: req.query.lat,
-          lon: req.query.lon,
-          units: "metric",
+          q: req.query.q,
+          limit: 1,
           appid: apiKey,
         },
       }
